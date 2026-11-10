@@ -1,0 +1,7 @@
+#!/bin/sh
+echo "Запуск flake8..."
+if ! python -m flake8 .; then
+    echo "Найдены ошибки flake8. Исправьте их перед коммитом."
+    exit 1
+fi
+echo "Проверка flake8 пройдена!"
